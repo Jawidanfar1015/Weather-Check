@@ -5,7 +5,7 @@
  1.3 The User has a list of most viewed cities on the  left side of the screen and can check the weather with one click only.
  1.4 this app is responsive for different devices.
 
-2. Compatibility
+2. Compatibility \n
   2.1 Laptop or PCs.
   ![view1](https://user-images.githubusercontent.com/99248057/167991740-838f6aff-5760-4646-9832-36de37533093.png)
  
