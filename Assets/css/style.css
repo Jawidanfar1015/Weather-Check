@@ -1,0 +1,85 @@
+*{
+    font-family: 'McLaren', cursive;
+    background-color: rgb(204, 204, 241);
+}
+:root{
+    --heading: rgb(6, 70, 102);
+    --text-color: white;
+    --border-color: rgb(94, 112, 109);
+    --border-size: 2px;
+    --border-radius: 5px;
+}
+.hero{
+    background-color: var(--heading);
+    border: solid var(--border-size) var(--border-color);
+    margin: var(--border-size) 0;
+    color: var(--text-color)
+}
+.app-title{
+    background-color: var(--heading); 
+}
+.card-header{
+    background-color: var(--heading);
+    color: var(--text-color);
+}
+
+#cityn{
+    height: 50px;
+    background-color: var(--heading);
+}
+.current_date{
+    background-color: var(--heading);
+    font-size: 20px;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.row.today{
+    border-radius: var(--border-radius);
+    border: solid var(--border-size) var(--border-color);
+    
+}
+.card1{
+    border: solid var(--border-size) var(--border-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;  
+}
+.card2{
+    border: solid var(--border-size) var(--border-color);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);  
+}
+.btn, .btn1{
+    border-radius: var(--border-radius);
+    border: solid var(--border-size);
+    background-color: rgb(90, 152, 223);
+    color: var(--text-color);
+    z-index: 1;
+}
+.btn:hover{
+    color:rgba(241, 214, 105, 0.978)
+}
+.form-input{
+    border: solid var(--border-size) var(--text-color);
+    background-color: var(--text-color);
+    color: rgba(0, 0, 0, 0.448)
+}
+.card{
+    border: solid var(--border-size) var(--border-color);
+    margin-top: var(--border-size);
+    background-color: rgb(90, 152, 223);
+}
+#date{
+    background-color: var(--heading);
+    color: var(--text-color);
+    padding: var(--border-radius);
+}
+.p-2{
+    padding-left: 0%;
+}
+.today1{
+ text-align: right;
+ color: var(--text-color);
+}
+.uv_index{
+    color: var(--text-color);
+    padding: 2px 8px;
+}
