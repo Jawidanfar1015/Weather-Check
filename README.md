@@ -1,11 +1,11 @@
 # Weather-Check
-1. Description
- 1.1 This is a very simple Weather App that provides the current weather and the five upcoming days.
- 1.2 The User can see the weather condition of any city that He/She wants to see.
- 1.3 The User has a list of most viewed cities on the  left side of the screen and can check the weather with one click only.
- 1.4 this app is responsive for different devices.
+1. Description </br>
+ 1.1 This is a very simple Weather App that provides the current weather and the five upcoming days.</br>
+ 1.2 The User can see the weather condition of any city that He/She wants to see.</br>
+ 1.3 The User has a list of most viewed cities on the  left side of the screen and can check the weather with one click only.</br>
+ 1.4 this app is responsive for different devices.</br>
 
-2. Compatibility \n
+2. Compatibility
   2.1 Laptop or PCs.
   ![view1](https://user-images.githubusercontent.com/99248057/167991740-838f6aff-5760-4646-9832-36de37533093.png)
  
