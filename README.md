@@ -1,8 +1,8 @@
 # Weather-Check</br>
 1. Description </br>
- 1.1 This is a very simple Weather App that provides the current weather and the five upcoming days.</br>
- 1.2 The User can see the weather condition of any city that He/She wants to see.</br>
- 1.3 The User has a list of most viewed cities on the  left side of the screen and can check the weather with one click only.</br>
+ 1.1 This is a very simple Weather App that provides the current weather and forecast the five upcoming days.</br>
+ 1.2 The User can see the weather condition of any city after searching the name of city.</br>
+ 1.3 The User has a list of search history on the left side of the screen and can check the weather with one click only.</br>
  1.4 this app is responsive for different devices.</br>
 </br>
 2. Compatibility</br>
@@ -17,7 +17,7 @@
   </br>
 3. How to use it?</br>
  3.1 On the left side you can use the search engine and type the name of your favourite city to see the weather condition .</br>
- 3.2 Under the search engine you will see a list of top cities and you can see the weather condition of each by clicking of them.</br>
+ 3.2 Under the search engine you will see a list of cities based on search history and you can see the weather condition of each by clicking on them.</br>
  </br>
 4. Resources </br>
  4.1 https://getbootstrap.com/ </br>

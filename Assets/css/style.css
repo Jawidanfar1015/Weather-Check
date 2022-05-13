@@ -1,6 +1,7 @@
 *{
     font-family: 'McLaren', cursive;
-    background-color: rgb(204, 204, 241);
+    background-color: rgb(35, 129, 124);
+    color: var(--text-color);
 }
 :root{
     --heading: rgb(6, 70, 102);
@@ -34,7 +35,7 @@
     text-align: left;
 }
 
-.row.today{
+.today{
     border-radius: var(--border-radius);
     border: solid var(--border-size) var(--border-color);
     
@@ -54,7 +55,8 @@
     color: var(--text-color);
     z-index: 1;
 }
-.btn:hover{
+
+.btn:hover, .btn1:hover{
     color:rgba(241, 214, 105, 0.978)
 }
 .form-input{

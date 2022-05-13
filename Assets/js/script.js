@@ -1,20 +1,34 @@
-var search = document.querySelector("#user-form");
+var searchInput = document.querySelector(".btn1");
 var newName = document.querySelector("input");
 var cityName = document.querySelector('#cityn');
 var buttonSearch = document.querySelector('#language-buttons');
+var buttonContainer = document.querySelector('#language-buttons');
 
-localStorage.setItem(newName, "city");
+
 
 function searchCity(event){
-    event.preventDefault();
+    var searchButton = event.target.getAttribute('data-city1');
     var city = newName.value.trim();
-    localStorage.setItem(city, "city");
-    if (city) {
+    localStorage.setItem("city1", city);
+    if (searchButton) {
         getWeather(city);
         currentWeather(city);
         cityUpdate(city);
+        var dataValue = localStorage.getItem("city1");
+        searchHistoryButton(dataValue);
       }
 }
+function searchHistoryButton(dataValue){
+    var dataCapValue = dataValue.toUpperCase();
+    var dataButton = document.createElement("button");
+    dataButton.classList = "btn col-12 p-2 m-1";
+    dataButton.textContent = dataCapValue;
+    dataButton.setAttribute("data-city", dataCapValue);
+    buttonContainer.appendChild(dataButton);
+}
+
+
+
 function cityUpdate(city){
     var capCity = city.toUpperCase();
     document.querySelector("#cityn").innerHTML = capCity;
@@ -133,5 +147,5 @@ function time(){
     document.querySelector('.day_five').textContent = day5;
 }
 setInterval(time, 1000);
-search.addEventListener("click", searchCity);
+searchInput.addEventListener("click", searchCity);
 buttonSearch.addEventListener('click', buttonClickHandler);
