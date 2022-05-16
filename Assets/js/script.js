@@ -14,8 +14,8 @@ function searchCity(event){
         getWeather(city);
         currentWeather(city);
         cityUpdate(city);
-        var dataValue = localStorage.getItem("city1");
-        searchHistoryButton(dataValue);
+        
+        
       }
 }
 function searchHistoryButton(dataValue){
@@ -86,10 +86,17 @@ function currentWeather(city){
     var firstUrl = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial&appid=1f7caf8699eddc2075614920996436b1";
     fetch(firstUrl)
     .then(function(resp){
-        return resp.json();
+        if (resp.status > 199 && resp.status < 399){
+            var dataValue = localStorage.getItem("city1"); 
+            searchHistoryButton(dataValue);
+            return resp.json();
+        }else{
+            alert("please enter a valid city")
+            return;
+        }
+         
     })
     .then(function(current){
-            console.log(current);
             document.querySelector(".temp").innerHTML = current.main.temp + "° F"
             document.querySelector(".wind").innerHTML = current.wind.speed + " mil/hr"
             document.querySelector(".humidity").innerHTML = current.main.humidity + " %"
@@ -99,7 +106,7 @@ function currentWeather(city){
             gettingUvi(lat, lon);
     })
     .catch(function (error) {
-        alert('Unable to connect to server...');
+        alert('Something went wrong...');
       });
 }
 function gettingUvi(lat, lon){
@@ -115,16 +122,14 @@ function gettingUvi(lat, lon){
         uviBackground(uvi)
         console.log(uvi);
     })
-    .catch(function (error) {
-        alert('Unable to connect to server...');
-      });
 }
 
 function uviBackground(uvi){
-    if(uvi < "0.1"){
+    if(uvi < "0.5"){
        document.getElementById('uv_i').style.backgroundColor = "blue";  
-    } else if (uvi > "0.1" && uvi < "0.5"){
-        document.getElementById('uv_i').style.backgroundColor = "yellow";  
+    } else if (uvi > "0.1" && uvi < "1"){
+        document.getElementById('uv_i').style.backgroundColor = "yellow";
+        document.getElementById('uv_i').style.color = "black";  
     }else{
         document.getElementById('uv_i').style.backgroundColor = "red";   
     }
