@@ -125,13 +125,17 @@ function gettingUvi(lat, lon){
 }
 
 function uviBackground(uvi){
-    if(uvi < "0.5"){
-       document.getElementById('uv_i').style.backgroundColor = "blue";  
-    } else if (uvi > "0.1" && uvi < "1"){
+    if(uvi <= 2){
+       document.getElementById('uv_i').style.backgroundColor = "green";  
+    }else if (uvi > 2 && uvi <= 6){
         document.getElementById('uv_i').style.backgroundColor = "yellow";
         document.getElementById('uv_i').style.color = "black";  
+    }else if(uvi > 6 && uvi <= 8){
+        document.getElementById('uv_i').style.backgroundColor = "orange";   
+    }else if(uvi > 8 && uvi <= 11){
+        document.getElementById('uv_i').style.backgroundColor = "red";  
     }else{
-        document.getElementById('uv_i').style.backgroundColor = "red";   
+        document.getElementById('uv_i').style.backgroundColor = "purple";
     }
 }
 
