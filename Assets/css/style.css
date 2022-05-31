@@ -1,12 +1,12 @@
 *{
     font-family: 'McLaren', cursive;
-    background-color: rgb(35, 129, 124);
+    background-color: rgb(115, 220, 214);
     color: var(--text-color);
 }
 :root{
-    --heading: rgb(6, 70, 102);
+    --heading: rgb(8, 131, 192);
     --text-color: white;
-    --border-color: rgb(94, 112, 109);
+    --border-color: rgb(9, 228, 184);
     --border-size: 2px;
     --border-radius: 5px;
 }
