@@ -5,7 +5,7 @@ var buttonSearch = document.querySelector('#language-buttons');
 var buttonContainer = document.querySelector('#language-buttons');
 
 
-
+// apply functions from created button on the list //
 function searchCity(event){
     var searchButton = event.target.getAttribute('data-city1');
     var city = newName.value.trim();
@@ -28,12 +28,13 @@ function searchHistoryButton(dataValue){
 }
 
 
-
+// update city name on top of the app //
 function cityUpdate(city){
     var capCity = city.toUpperCase();
     document.querySelector("#cityn").innerHTML = capCity;
 }
 
+// apply functions after clicking the button //
 function buttonClickHandler(event){
     var city = event.target.getAttribute('data-city');
     if (city){
@@ -43,7 +44,7 @@ function buttonClickHandler(event){
     }
 }
 
-
+// fetching 5 upcoming days forecast for the requested city //
 function getWeather(city){
     var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" +city+ "&units=imperial&appid=1f7caf8699eddc2075614920996436b1";
     
@@ -81,7 +82,7 @@ function getWeather(city){
               });
 }
 
-
+// fetching current weather //
 function currentWeather(city){
     var firstUrl = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial&appid=1f7caf8699eddc2075614920996436b1";
     fetch(firstUrl)
@@ -109,6 +110,8 @@ function currentWeather(city){
         alert('Something went wrong...');
       });
 }
+
+// with lat and lon values fetching the UV Index //
 function gettingUvi(lat, lon){
     var repeuestUvi = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&exclude=daily&units=imperial&appid=1f7caf8699eddc2075614920996436b1";
     fetch(repeuestUvi)
@@ -124,6 +127,7 @@ function gettingUvi(lat, lon){
     })
 }
 
+// setting a background color for UV Index //
 function uviBackground(uvi){
     if(uvi <= 2){
        document.getElementById('uv_i').style.backgroundColor = "green";  
@@ -139,7 +143,7 @@ function uviBackground(uvi){
     }
 }
 
-
+// getting date for current and five upcoming days for the app //
 var today = moment().format('DD/MM/YYYY')
 var day1 = moment().add(1, 'days').format("DD/MM/YYYY")
 var day2 = moment().add(2, 'days').format("DD/MM/YYYY")
@@ -147,6 +151,7 @@ var day3 = moment().add(3, 'days').format("DD/MM/YYYY")
 var day4 = moment().add(4, 'days').format("DD/MM/YYYY")
 var day5 = moment().add(5, 'days').format("DD/MM/YYYY")
 
+// apply the result of date to the page //
 function time(){
     document.querySelector('.current_date').textContent = '('+today+')'
     document.querySelector('.day_one').textContent = day1;
@@ -155,6 +160,10 @@ function time(){
     document.querySelector('.day_four').textContent = day4;
     document.querySelector('.day_five').textContent = day5;
 }
+
+// set Interval to remain updated //
 setInterval(time, 1000);
+
+// add Event listener to the Buttons //
 searchInput.addEventListener("click", searchCity);
 buttonSearch.addEventListener('click', buttonClickHandler);
