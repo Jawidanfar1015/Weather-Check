@@ -16,8 +16,10 @@ function searchCity(event){
         cityUpdate(city);
         
         
-      }
+    }
 }
+
+// creates button from the search history //
 function searchHistoryButton(dataValue){
     var dataCapValue = dataValue.toUpperCase();
     var dataButton = document.createElement("button");
