@@ -3,10 +3,11 @@
     background-color: rgb(115, 220, 214);
     color: var(--text-color);
 }
+/* adding variables for the repetitive values */
 :root{
     --heading: rgb(8, 131, 192);
     --text-color: white;
-    --border-color: rgb(9, 228, 184);
+    --border-color: rgb(7, 83, 68);
     --border-size: 2px;
     --border-radius: 5px;
 }
@@ -56,6 +57,7 @@
     z-index: 1;
 }
 
+/* Hover state for the button */
 .btn:hover, .btn1:hover{
     color:rgba(241, 214, 105, 0.978)
 }
